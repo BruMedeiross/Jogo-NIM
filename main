@@ -1,0 +1,61 @@
+input("Bem-vindo ao jogo do NIM! Click enter e Escolha: ")
+campeonato = 2      
+partida = 1 
+
+escolha = int(input("1 - para jogar uma partida isolada 2 - para jogar um campeonato: "))
+if escolha == partida:
+    print("Você escolheu uma partida!")
+    Partida()
+elif escolha == campeonato:
+    print("Você escolheu um campeonato!")
+        campeonato()
+else:
+    print("opção inválida")
+    
+def Partida():
+                    
+    input("**** Rodada 1 ****")
+    
+    n = int(input("Quantas peças? ")) 
+    m = int(input("Limite de peças por jogada?"))  
+    valorU = usuario_escolhe_jogada
+    valorC = computador_escolhe_jogada
+    if (n % (m+1)) == 0:
+        print("você começa")
+        valorU = usuario_escolhe_jogada
+    else:
+        print("computador começa")
+        valorC = computador_escolhe_jogada
+
+def computador_escolhe_jogada (n, m): 
+    valor = int(input("quantas peças voçê quer tirar"))
+    limite = n-m
+    while valor > m or valor > n and valor <=0:
+        print("valor inválido")
+        valor = int(input("quantas peças voçê quer tirar"))
+                     
+    else:
+        return("O computador tirou", valor, "peças")
+        return (valor)
+        
+def usuario_escolhe_jogada(n, m):
+    valor = int(input("\nQuantas peças você vai tirar? "))
+    while valor > m or valor <= 0 or valor > n:    
+        print("Oops! Jogada inválida! Tente de novo.")
+    valor = int(input("\nQuantas peças você vai tirar? "))
+        
+def usuario_escolhe_jogada (n,m): 
+    valorU = int(input("Digite a quantidade de peças que deseja retirar: "))
+    quantidade = m 
+    if quantidade == user:
+        return("O usuário retirou", user, "peças") 
+    elif quantidade != user:
+        return ("Valor inválido")          
+    else:    
+        computador_escolhe_jogada
+
+    
+    
+    #Sejam n o número de peças inicial e m o número máximo de peças que é possível retirar em uma rodada. 
+#Se n é múltiplo de (m+1), o computador deve ser "generoso" e convidar o jogador a iniciar a partida com a frase "Você começa"
+           
